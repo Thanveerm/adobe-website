@@ -14,59 +14,51 @@
         box-sizing: border-box;
     }
     body{
-        background-color:black;
-    }
-
-
-    .background{
-
-    background-repeat:no-repeat;
-    background-size:cover;
-
-    }
-
-    .background{
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-image: url('image/20.PNG');
         height: 100%;
-        width: 100%;
+        width: 100%;        
     }
-    header{
-        width: 500px;
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .box{ 
+        width: 100%;
+        max-width: 500px;
         height: 630px;
         background-color:white;
         box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        top: 10%;
+        margin-top: 70px;
     }
-    h1{
+     h1{
         padding-left: 60px;
         padding-top :60px; ;
-
     }
-    h3{
-        padding-left: 60px;
-        color: black;
-
+    .box .img-logo{
+        display: none;
     }
-    section{
-        padding-top: 10px;
-    }
+    
     h6{
         color: black;
         padding-left: 60px;
 
     }
     .input{
-        padding-left: 30px;
         border: none;
         outline: none;;
         margin-left: 60px;
         border-bottom: 2px solid blue;
+        border-radius: 2px; border: none;
+        outline: none;;
+        margin-left: 60px; 
+        margin-right: 10px;
+        border-bottom: 2px solid blue;
         border-radius: 2px;
-        }
+        } 
     .button5 {
-        border-radius: 50%;
+        border-radius: 20px;
         background-color: #0000ff;
         border: none;
         color: white;
@@ -77,19 +69,16 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-        left: 20%;
-                
+        float: right;           
     }
-
-    .image{
+     .image{
         text-align: center;
         margin-top: 50px
-
     }
     .socila-media-login{
         display: flex;
-        flex-direction: row;
-
+        flex-direction:column;
+        align-items: center; 
     }
     .socila-media-login-google{
             font-size: 20px;
@@ -123,70 +112,83 @@
     .socila-media-login-apple{
             font-size: 20px;
             border-style: solid;
-            border-radius: 10px;
+            border-radius: 15px;
             border-width: 2px;
             font-weight: 700;
             padding-left: 20px;
             padding-right: 20px;
-            background-color: black;
-            color: blanchedalmond;
-            width: 100%;
-            
+            background-color:black;
+            color: floralwhite;     
     }
     .socila-media-login-apple:hover{
         background-color:gray;
-    }
-    .socilamedia{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        padding-left: 60px;
-
-    }
+    } 
     @media screen and (max-width:768px) {
         body{
             overflow-x: hidden;
         }
-        header{
-        
-            width: 100%;
-            
+        main{
+            width: 100%;      
             background-color:white;
             box-sizing: border-box;
             display: flex;
             justify-content: space-evenly;
+        } 
+        body{
+            height: 100vh;
+            width: 100%;
         }
-        .background{
-             height: 100%;
-             width: 100%;
+        .box .img-logo
+        {
+            display: block;
         }
-       
+
+    }
+    .box h3{
+        margin-left: 55px;
+        font-family: adobe-clean,'Source Sans Pro',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
     }
 </style>
     <body>
-        <header>
-            <div class="box-border">
-                <h1 style="color:black;">Sign In</h1><br>
-                <h3>New user? <a href="#">Create a new account</a></h3><br>
-                <section>
-                    <h6>Email address</h6> <br>
-                    <input type="email" name="email" class="input">
-                </section>
-                <!-- <button class="button5">Continue</button><br><br><br><hr> -->
-                <br><br><hr><br><br><br><br>
-                <div class="socilamedia">
-                    <div class="socila-media-login-google" style="text-align: center;">
-                        <img src="image/22.PNG"> Continue with google
+        <main>            
+            <div class="container">
+                <div class="box-1">
+                </div>
+                <div class="box-2">
+                </div>
+                <div class="box">
+                    <div class="img-logo">
+                        <img src="https://auth.services.adobe.com/img/generic/adobe_logo_black.svg">
+                    </div>
+                    <div>
+                        <h1 style="color:black;">Sign In</h1><br>
+                    </div>
+                    <div>
+                        <h3>New user? <a href="#">Create a new account</a></h3><br>
+                    </div>
+                    <div>
+                        <h6>Email address</h6> <br>
+                    </div>
+                    <div>
+                        <input type="email" name="email" class="input" style="width: 70%;">
                     </div><br>
-                    <div class="socila-media-login-facebook" style="text-align: center;">
-                        <img src="image/23.PNG">Continue with facebook
-                    </div> <br>   
-                    <div class="socila-media-login-apple" style="text-align: center;"> 
-                        <img src="image/25.PNG"> Continue with apple
-                    </div><br>
+                    <div>
+                        <button class="button5">Continue</button>   
+                    </div><br><br><br>
+                    <hr><br><br><br>
+                    <div class="socila-media-login">
+                        <div class="socila-media-login-google" style="text-align: center;">
+                            <img src="image/22.PNG"> Continue with google
+                        </div><br>
+                        <div class="socila-media-login-facebook" style="text-align: center;">
+                            <img src="image/23.PNG">Continue with facebook
+                        </div> <br>   
+                        <div class="socila-media-login-apple" style="text-align: center;"> 
+                            <img src="image/25.PNG"> Continue with apple
+                        </div><br>
+                    </div>
                 </div>
             </div>
-        </header>
+        </main>
 </body>
 </html>
